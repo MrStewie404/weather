@@ -1,0 +1,138 @@
+@font-face {
+  font-family: silkscreen;
+  src: url("materials/silkscreen.ttf");
+}
+
+* {
+  font-family: silkscreen;
+}
+
+.error_connect {
+  margin-top: 50px;
+
+}
+
+body {
+  background-color: #d5d5d5;
+}
+
+p {
+  margin: 0px;
+}
+
+.error_connect h1, p{
+  display: flex;
+  margin: 0px 10px;
+  /* justify-content: center; */
+}
+
+.connected {
+  /* display: flex; */
+  justify-content: center;
+  /* margin: 0px 35%;  */
+}
+
+.connected h1, h3 {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset{
+  padding: 20px 90px 0px 90px;
+  margin: 20px auto;
+  min-width: 260px;
+  width: 0%;
+  max-width: 400px;
+  padding-bottom: 20px;
+  box-shadow: inset -2px -2px 2px 1px #00000059;
+}
+
+fieldset .second{
+  padding: 0px;
+  margin: 5px auto;
+  background-color: rgba(0, 17, 255, 0.317);
+}
+
+fieldset .time{
+  margin: 5px auto;
+  /* background-color: rgba(0, 255, 60, 0.317); */
+}
+
+.city{
+  display: flex;
+  justify-content: center;
+}
+
+
+.weather-block {
+  /* Общие стили для блока */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+
+.weather-block-cold {
+  background-color: lightblue; /* Холодная температура */
+}
+
+.weather-block-warm {
+  background-color: lightyellow; /* Теплая температура */
+}
+
+.weather-block-hot {
+  background-color: lightcoral; /* Жаркая температура */
+}
+
+input {
+  display: flex;
+  max-width: 210px;
+  width: 40%;
+  justify-content: center;
+  margin: 17px 0px 17px 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  border: 1px solid #cccccc;
+}
+
+.my-input {
+  transition: 0.2s ease-out;
+}
+
+.my-input:focus {
+  transform:10px;
+}
+
+.dropdown-menu {
+  position: absolute; 
+  background-color: rgb(199, 199, 199);
+  border: 5px solid #000000;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 10px #00000076;
+  /* display: none; Скрываем по умолчанию */
+}
+
+.weather-five-day {
+  display:flex;
+  justify-content: center;
+  /* flex-direction: columns */
+}
+
+button {
+  color: black;
+  border-radius: 0px;
+  padding: 3px 80px;
+  font-size: 20px;
+}
+
+@media (max-width: 800px) and (max-device-width: 768px) {
+  .weather-five-day {
+    display: block;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .weather-five-day {
+    display: block;
+  }
+}
