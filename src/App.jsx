@@ -23,7 +23,7 @@ function App() {
     const apiKey = '58747994067c8c0d210e62c59616b3b1'; 
     // const apiUrlNow = 'http://172.20.10.3:3000/data'
     // const apiUrlFiveDay = 'http://172.20.10.3:3001/data'
-    const apiUrlNow = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey + '&units=metric&lang=ru' ; 
+    const apiUrlNow = 'https://api.openweathermap.org/datыa/2.5/weather?q=' + city + '&appid=' + apiKey + '&units=metric&lang=ru' ; 
     const apiUrlFiveDay = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=' + apiKey + '&units=metric&lang=ru';  
 
     axios.get(apiUrlNow)
@@ -36,8 +36,8 @@ function App() {
         console.error('Ошибка при получении данных о 5-дневном прогнозе:', error);
         setWeatherDataFiveDay({ error: true }); // Сохраните информацию об ошибке
       });
+      console.info(apiUrlFiveDay);
   }, [city]);
-    console.info(weatherDataFiveDay);
 
   if (weatherDataNow) {
     return (
@@ -127,8 +127,8 @@ function App() {
     } else {
       return (
         <div class="error_connect">
-          <h1>Нет соединения</h1>
-          <p style={{ textAlign: 'center' }}>Проверьте своё подключение к интернету или попробуйте позже</p>
+          <h1>Ошибка :(</h1>
+          <p style={{ textAlign: 'center' }}>openweathermap.org не вернул каких-либо данных</p>
         </div>
       );
     }
